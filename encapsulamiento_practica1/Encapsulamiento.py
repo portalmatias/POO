@@ -15,6 +15,10 @@ class Vehiculo:
         consumo = self.__kilometro * 0.5
         return consumo
 
+    def consumo(self):
+        consumo = self._calcular_consumo()
+        print(f"El consumo del auto es: {consumo}")
+
     @property
     def kilometro(self):
         return self.__kilometro
@@ -24,9 +28,9 @@ class Vehiculo:
         self.__kilometro = nuevo_kilometro
         print(f"Los kilometros ahora son: {nuevo_kilometro}. Consumo ahora: {self._calcular_consumo()}")
 
-vehiculo1 = Vehiculo("vw", "golf", 15000)
+vehiculo1 = Vehiculo("vw", "golf", 10)
 
 vehiculo1.mostrar_info()
+vehiculo1.consumo()
 
-
-vehiculo1.kilometro = 20000
+vehiculo1.kilometro = 15
